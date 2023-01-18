@@ -1,17 +1,18 @@
+import { Link } from 'react-router-dom';
 import GoogleLogo from '../../../../assets/google-logo.svg';
 
 const LoginPage = () => {
 	return (
-		<div className="w-[50%] h-screen">
+		<div className="w-[100%] max-w-full md:w-[50%] h-screen">
 			<div className="font-black text-black text-3xl h-[100px] flex items-center justify-end pr-6">
 				<div>Invision</div>
 			</div>
 			<div>
-				<div className="flex items-center justify-center w-[80%]">
+				<div className="flex items-center justify-center w-[100%]">
 					<h3>Welcome to Invision</h3>
 				</div>
 				<div>
-					<form className="flex flex-col w-[80%] p-12">
+					<form className="flex flex-col w-[100%] md-[80%] p-12">
 						<span className="text-sm">Users name or Email</span>
 						<input
 							type="text"
@@ -43,6 +44,14 @@ const LoginPage = () => {
 								<img src={GoogleLogo} width={20} height={20} />
 								Sign in with Google
 							</button>
+						</div>
+						<div className="flex items-center justify-center mt-8">
+							<p>
+								New invision?{' '}
+								<Link to="/register" className="underline text-[#A9C5BA]">
+									Create Account
+								</Link>
+							</p>
 						</div>
 					</form>
 				</div>

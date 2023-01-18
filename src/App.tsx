@@ -5,7 +5,7 @@ import RegisterPage from './modules/auth/pages/register';
 
 const App = () => {
 	return (
-		<div className="w-screen h-screen">
+		<div className="w-screen h-screen max-w-full">
 			<Routes>
 				<Route path="/" element={<Carousel />}>
 					<Route index element={<LoginPage />} />
