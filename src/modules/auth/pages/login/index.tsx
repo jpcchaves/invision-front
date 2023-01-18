@@ -3,7 +3,7 @@ import GoogleLogo from '../../../../assets/google-logo.svg';
 
 const LoginPage = () => {
 	return (
-		<div className="w-[100%] max-w-full md:w-[50%] h-screen">
+		<div className="w-[100%] max-w-full md:w-[50%] md:h-screen pb-48">
 			<div className="font-black text-black text-3xl h-[80px] flex items-center justify-end pr-6">
 				<div>Invision</div>
 			</div>

@@ -4,7 +4,7 @@ import GoogleLogo from '../../../../assets/google-logo.svg';
 
 const RegisterPage = () => {
 	return (
-		<div className="w-[100%] max-w-full md:w-[50%] h-screen">
+		<div className="w-[100%] max-w-full md:w-[50%] md:h-screen pb-48">
 			<div className="font-black text-black text-3xl h-[80px] flex items-center justify-end pr-6">
 				<div>Invision</div>
 			</div>
@@ -49,7 +49,7 @@ const RegisterPage = () => {
 								Sign up with Google
 							</button>
 						</div>
-						<div className="flex flex-col gap-4 items-center justify-center mt-8 w-[80%] tracking-widest text-center m-auto">
+						<div className="flex flex-col gap-4 items-center justify-center mt-8 w-[100%] tracking-widest text-center m-auto">
 							<p className="text-sm">
 								By signing up, you agree to <strong>Invision</strong>{' '}
 								<Link to="/register" className="underline text-[#A9C5BA]">
