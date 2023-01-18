@@ -8,7 +8,7 @@ const App = () => {
 		<div className="w-screen h-screen max-w-full max-h-full">
 			<Routes>
 				<Route path="/" element={<Carousel />}>
-					<Route path="/" index element={<LoginPage />} />
+					<Route index path="/login" element={<LoginPage />} />
 					<Route path="/register" element={<RegisterPage />} />
 				</Route>
 			</Routes>

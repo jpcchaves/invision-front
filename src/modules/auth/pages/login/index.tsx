@@ -4,7 +4,7 @@ import GoogleLogo from '../../../../assets/google-logo.svg';
 const LoginPage = () => {
 	return (
 		<div className="w-[100%] max-w-full md:w-[50%] h-screen">
-			<div className="font-black text-black text-3xl h-[100px] flex items-center justify-end pr-6">
+			<div className="font-black text-black text-3xl h-[80px] flex items-center justify-end pr-6">
 				<div>Invision</div>
 			</div>
 			<div>
@@ -12,7 +12,7 @@ const LoginPage = () => {
 					<h3>Welcome to Invision</h3>
 				</div>
 				<div>
-					<form className="flex flex-col w-[100%] md-[80%] p-12">
+					<form className="flex flex-col w-[100%] md-[80%] px-12 py-2">
 						<span className="text-sm">Users name or Email</span>
 						<input
 							type="text"
@@ -21,7 +21,7 @@ const LoginPage = () => {
 						/>
 						<span className="text-sm focus:outline-none">Password</span>
 						<input
-							type="text"
+							type="password"
 							className="mb-5 border-b border-b-slate-300 p-2 focus:outline-none"
 							placeholder="Enter your password"
 						/>
@@ -47,7 +47,7 @@ const LoginPage = () => {
 						</div>
 						<div className="flex items-center justify-center mt-8">
 							<p>
-								New invision?{' '}
+								New <strong>Invision</strong>?{' '}
 								<Link to="/register" className="underline text-[#A9C5BA]">
 									Create Account
 								</Link>
