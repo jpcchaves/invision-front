@@ -20,7 +20,7 @@ const Carousel = () => {
 					<Lottie animationData={businessTeamAnimation} className="h-[100%]" />
 				</div>
 				<div className="mt-20">
-					<div className=" w-full h- relative text-center tracking-widest text-white">
+					<div className=" w-[80%] m-auto h- relative text-center tracking-widest text-white">
 						<div className="w-full h-full rounded">
 							<h3 className="pb-3 duration-500">
 								{dataSliderPlaceholder[currentIndex].title}
