@@ -5,10 +5,10 @@ import RegisterPage from './modules/auth/pages/register';
 
 const App = () => {
 	return (
-		<div className="w-screen h-screen max-w-full">
+		<div className="w-screen h-screen max-w-full max-h-full">
 			<Routes>
 				<Route path="/" element={<Carousel />}>
-					<Route index element={<LoginPage />} />
+					<Route path="/" index element={<LoginPage />} />
 					<Route path="/register" element={<RegisterPage />} />
 				</Route>
 			</Routes>

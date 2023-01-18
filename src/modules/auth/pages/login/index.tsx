@@ -29,17 +29,17 @@ const LoginPage = () => {
 							<span>Forgot password?</span>
 						</div>
 
-						<div className="flex items-center justify-center mt-8">
+						<div className="flex items-center justify-center mt-4">
 							<button className="border-none bg-[#707070] text-white py-3 px-12 rounded-full">
 								Sign in
 							</button>
 						</div>
-						<div className="flex items-baseline justify-center mt-8">
+						<div className="flex items-baseline justify-center mt-4">
 							<span className="border-b border-b-slate-300 inline-block w-[100px]"></span>
 							<small className="px-2">or</small>
 							<span className="border-b border-b-slate-300 inline-block w-[100px]"></span>
 						</div>
-						<div className="flex items-center justify-center mt-8">
+						<div className="flex items-center justify-center mt-4">
 							<button className="border-none bg-[#FFFFFF] text-black font-semibold py-3 px-12 rounded-full flex gap-2 items-center justify-center shadow-lg">
 								<img src={GoogleLogo} width={20} height={20} />
 								Sign in with Google
