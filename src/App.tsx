@@ -1,5 +1,19 @@
+import { Route, Routes } from 'react-router-dom';
+import Carousel from './components/Carousel';
+import LoginPage from './modules/auth/pages/login';
+import RegisterPage from './modules/auth/pages/register';
+
 const App = () => {
-	return <div className="bg-[##FFFFFF]"></div>;
+	return (
+		<div className="w-screen h-screen">
+			<Routes>
+				<Route path="/" element={<Carousel />}>
+					<Route index element={<LoginPage />} />
+					<Route path="/register" element={<RegisterPage />} />
+				</Route>
+			</Routes>
+		</div>
+	);
 };
 
 export default App;
