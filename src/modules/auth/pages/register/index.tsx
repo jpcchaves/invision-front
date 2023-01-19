@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import GoogleLogo from '../../../../assets/google-logo.svg';
 
@@ -65,7 +64,7 @@ const RegisterPage = () => {
 							</p>
 							<p className="text-sm">
 								Already <strong>Invision</strong> on?{' '}
-								<Link to="/login" className="underline text-[#A9C5BA]">
+								<Link to="/" className="underline text-[#A9C5BA]">
 									Log in
 								</Link>
 							</p>
