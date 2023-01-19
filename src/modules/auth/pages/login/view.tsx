@@ -1,13 +1,20 @@
 import { Form, Formik } from 'formik';
 import { FormikHelpers, FormikValues } from 'formik/dist/types';
+import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import GoogleLogo from '../../../../assets/google-logo.svg';
 
 interface LoginViewI {
 	validation: FormikValues;
+	showPassword: boolean;
+	toggleShowPassword: () => void;
 }
 
-const LoginView = ({ validation }: LoginViewI) => {
+const LoginView = ({
+	validation,
+	showPassword,
+	toggleShowPassword,
+}: LoginViewI) => {
 	return (
 		<div className="w-[100%] max-w-full md:w-[50%] md:h-screen pb-48">
 			<div className="font-black text-black text-3xl h-[80px] flex items-center justify-end pr-6">
@@ -60,18 +67,26 @@ const LoginView = ({ validation }: LoginViewI) => {
 								</span>
 							) : null}
 							<span className="mt-1 text-sm focus:outline-none">Password</span>
-							<input
-								name="password"
-								type="password"
-								className={` p-2 focus:outline-none rounded ${
-									validation.touched.password && validation.errors.password
-										? 'border border-red-500'
-										: 'border-b border-b-slate-300 '
-								}`}
-								placeholder="Enter your password"
-								onChange={validation.handleChange}
-								value={validation.values.password || ''}
-							/>
+							<div className="w-full relative">
+								<input
+									name="password"
+									type={showPassword ? 'text' : 'password'}
+									className={`w-full p-2 focus:outline-none rounded ${
+										validation.touched.password && validation.errors.password
+											? 'border border-red-500'
+											: 'border-b border-b-slate-300 '
+									}`}
+									placeholder="Enter your password"
+									onChange={validation.handleChange}
+									value={validation.values.password || ''}
+								/>
+								<span
+									className="absolute right-3 top-3 cursor-pointer"
+									onClick={() => toggleShowPassword()}
+								>
+									{showPassword ? <BsEyeSlashFill /> : <BsEyeFill />}
+								</span>
+							</div>
 							{validation.touched.password && validation.errors.password ? (
 								<span className="text-red-500 mb-1 text-sm">
 									{validation.errors.password}
