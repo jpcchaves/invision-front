@@ -55,7 +55,7 @@ const LoginView = ({ validation }: LoginViewI) => {
 								value={validation.values.email || ''}
 							/>
 							{validation.touched.email && validation.errors.email ? (
-								<span className="text-red-500 mb-1">
+								<span className="text-red-500 mb-1 text-sm">
 									{validation.errors.email}
 								</span>
 							) : null}
@@ -73,7 +73,7 @@ const LoginView = ({ validation }: LoginViewI) => {
 								value={validation.values.password || ''}
 							/>
 							{validation.touched.password && validation.errors.password ? (
-								<span className="text-red-500 mb-1">
+								<span className="text-red-500 mb-1 text-sm">
 									{validation.errors.password}
 								</span>
 							) : null}

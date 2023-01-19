@@ -57,7 +57,7 @@ const RegisterView = ({ validation }: RegisterViewI) => {
 								value={validation.values.fullName || ''}
 							/>
 							{validation.touched.fullName && validation.errors.fullName ? (
-								<span className="text-red-500 mb-1">
+								<span className="text-red-500 mb-1 text-sm">
 									{validation.errors.fullName}
 								</span>
 							) : null}
@@ -76,7 +76,7 @@ const RegisterView = ({ validation }: RegisterViewI) => {
 								value={validation.values.email || ''}
 							/>
 							{validation.touched.email && validation.errors.email ? (
-								<span className="text-red-500 mb-1">
+								<span className="text-red-500 mb-1 text-sm">
 									{validation.errors.email}
 								</span>
 							) : null}
@@ -96,7 +96,7 @@ const RegisterView = ({ validation }: RegisterViewI) => {
 								value={validation.values.password || ''}
 							/>
 							{validation.touched.password && validation.errors.password ? (
-								<span className="text-red-500 mb-1">
+								<span className="text-red-500 mb-1 text-sm">
 									{validation.errors.password}
 								</span>
 							) : null}
