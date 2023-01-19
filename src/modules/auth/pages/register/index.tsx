@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { registerValidationSchema } from '../../../utils/validation/registerValidationSchema';
 import RegisterView from './view';
 
 const RegisterPage = () => {
@@ -10,14 +10,9 @@ const RegisterPage = () => {
 			email: '',
 			password: '',
 		},
-		validationSchema: Yup.object().shape({
-			fullName: Yup.string().required('Full name is a required field'),
-			email: Yup.string()
-				.required('Email is a required field')
-				.email('Please, use a valid email'),
-			password: Yup.string().required('Password is a required field'),
-		}),
-		onSubmit: (values) => alert(values),
+		validationSchema: registerValidationSchema,
+		onSubmit: ({ email, fullName, password }) =>
+			alert(`Nome: ${fullName}, Email: ${email}, Password: ${password}`),
 	});
 
 	return <RegisterView validation={validation} />;

@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { loginValidationSchema } from '../../../utils/validation/loginValidationSchema';
 import LoginView from './view';
 
 const LoginPage = () => {
@@ -9,12 +9,7 @@ const LoginPage = () => {
 			email: '',
 			password: '',
 		},
-		validationSchema: Yup.object().shape({
-			email: Yup.string()
-				.required('Email is a required field')
-				.email('Please, use a valid email'),
-			password: Yup.string().required('Password is a required field'),
-		}),
+		validationSchema: loginValidationSchema,
 		onSubmit: (values) => alert(`Você logou com sucesso: ${values.email}`),
 	});
 
