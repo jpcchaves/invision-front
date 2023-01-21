@@ -56,7 +56,7 @@ const LoginView = ({
 								className={`p-2 focus:outline-none rounded ${
 									validation.touched.email && validation.errors.email
 										? 'border border-red-500'
-										: 'border-b border-b-slate-300 '
+										: 'border-b border-b-slate-300 focus:border focus:border-[#A9C5BA]'
 								}`}
 								placeholder="Enter your user name or email"
 								onChange={validation.handleChange}
@@ -75,7 +75,7 @@ const LoginView = ({
 									className={`w-full p-2 focus:outline-none rounded ${
 										validation.touched.password && validation.errors.password
 											? 'border border-red-500'
-											: 'border-b border-b-slate-300 '
+											: 'border-b border-b-slate-300 focus:border focus:border-[#A9C5BA]'
 									}`}
 									placeholder="Enter your password"
 									onChange={validation.handleChange}
