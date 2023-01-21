@@ -3,6 +3,7 @@ import { FormikHelpers, FormikValues } from 'formik/dist/types';
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import GoogleLogo from '../../../../assets/google-logo.svg';
+import FormInvalidFeedback from '../../components/FormInvalidFeedback';
 
 interface LoginViewI {
 	validation: FormikValues;
@@ -63,7 +64,7 @@ const LoginView = ({
 							/>
 							{validation.touched.email && validation.errors.email ? (
 								<span className="text-red-500 mb-1 text-sm">
-									{validation.errors.email}
+									<FormInvalidFeedback message={validation.errors.email} />
 								</span>
 							) : null}
 							<span className="mt-1 text-sm focus:outline-none">Password</span>
@@ -89,7 +90,7 @@ const LoginView = ({
 							</div>
 							{validation.touched.password && validation.errors.password ? (
 								<span className="text-red-500 mb-1 text-sm">
-									{validation.errors.password}
+									<FormInvalidFeedback message={validation.errors.password} />
 								</span>
 							) : null}
 							<div className="text-end">

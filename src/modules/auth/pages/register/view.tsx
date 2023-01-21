@@ -3,6 +3,7 @@ import { FormikHelpers, FormikValues } from 'formik/dist/types';
 import { Link } from 'react-router-dom';
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 import GoogleLogo from '../../../../assets/google-logo.svg';
+import FormInvalidFeedback from '../../components/FormInvalidFeedback';
 
 interface RegisterViewI {
 	validation: FormikValues;
@@ -65,7 +66,7 @@ const RegisterView = ({
 							/>
 							{validation.touched.fullName && validation.errors.fullName ? (
 								<span className="text-red-500 mb-1 text-sm">
-									{validation.errors.fullName}
+									<FormInvalidFeedback message={validation.errors.fullName} />
 								</span>
 							) : null}
 
@@ -84,7 +85,7 @@ const RegisterView = ({
 							/>
 							{validation.touched.email && validation.errors.email ? (
 								<span className="text-red-500 mb-1 text-sm">
-									{validation.errors.email}
+									<FormInvalidFeedback message={validation.errors.email} />
 								</span>
 							) : null}
 							<span className="text-sm focus:outline-none">
@@ -112,7 +113,7 @@ const RegisterView = ({
 							</div>
 							{validation.touched.password && validation.errors.password ? (
 								<span className="text-red-500 mb-1 text-sm">
-									{validation.errors.password}
+									<FormInvalidFeedback message={validation.errors.password} />
 								</span>
 							) : null}
 
