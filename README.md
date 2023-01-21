@@ -51,3 +51,7 @@ Este projeto me ajudou a praticar ainda mais minhas habilidades com React, TypeS
 1 - Realizar componentizações de trechos de códigos repetitivos para otimizar o código e tornar os componentes menos encapsulados e mais manuteníveis.
 
 2 - Integrar o projeto com um Back-End real, desenvolvido por mim na linguagem Java utilizando o framework Spring Boot.
+
+## Apêndice
+
+Como observação, acrescento que as mensagens de validação dos campos do formulário foram propositalmente adicionada em Inglês para manter a consistência de projeto. Caso fosse necessário adicionar as mensagens traduzidas, bastaria apenas realizar uma breve alteração na validação feita pelo Yup.
