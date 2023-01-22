@@ -14,15 +14,12 @@ const Carousel = () => {
 	};
 
 	return (
-		<div className="w-full h-full flex items-center justify-center">
-			<div className="w-[50%] h-screen bg-[#A9C5BA] hidden md:block">
+		<div className="w-full min-h-screen h-full flex items-center justify-center">
+			<div className="w-[50%] min-h-screen bg-[#A9C5BA] hidden md:block">
 				<div className="h-[50%]">
-					<Lottie
-						animationData={businessTeamAnimation}
-						className="h-[100%] w-[100%]"
-					/>
+					<Lottie animationData={businessTeamAnimation} />
 				</div>
-				<div className="mt-20">
+				<div>
 					<div className=" w-[80%] m-auto h- relative text-center tracking-widest text-white">
 						<div className="w-full h-full rounded">
 							<h3 className="pb-3 duration-500">

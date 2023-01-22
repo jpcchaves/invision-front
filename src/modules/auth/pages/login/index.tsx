@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useFormik } from 'formik';
-import { loginValidationSchema } from '../../../utils/validation/loginValidationSchema';
 import LoginView from './view';
+import { loginValidationSchema } from '../../utils/validation/loginValidationSchema';
 
 const LoginPage = () => {
 	const [showPassword, setShowPassword] = useState(false);

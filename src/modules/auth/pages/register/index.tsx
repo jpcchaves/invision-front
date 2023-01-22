@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import { useState } from 'react';
-import { registerValidationSchema } from '../../../utils/validation/registerValidationSchema';
+import { registerValidationSchema } from '../../utils/validation/registerValidationSchema';
 import RegisterView from './view';
 
 const RegisterPage = () => {
