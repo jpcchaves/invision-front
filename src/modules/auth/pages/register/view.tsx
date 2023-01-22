@@ -90,7 +90,7 @@ const RegisterView = ({
 								<input
 									name="password"
 									type={showPassword ? 'text' : 'password'}
-									className={`w-full p-2 focus:outline-none rounded ${
+									className={`w-full min-w-full p-2 focus:outline-none rounded ${
 										validation.touched.password && validation.errors.password
 											? 'border border-red-500'
 											: 'border-b border-b-slate-300 focus:border focus:border-[#A9C5BA]'
@@ -100,7 +100,7 @@ const RegisterView = ({
 									value={validation.values.password || ''}
 								/>
 								<span
-									className="absolute top-1/2 left-[97%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+									className="absolute top-1/2 left-[97%] transform -translate-x-[97%] -translate-y-1/2 cursor-pointer"
 									onClick={() => toggleShowPassword()}
 								>
 									{validation.values.password ? (

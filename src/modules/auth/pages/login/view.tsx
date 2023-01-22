@@ -82,7 +82,7 @@ const LoginView = ({
 									value={validation.values.password || ''}
 								/>
 								<span
-									className="absolute top-1/2 left-[97%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+									className="absolute top-1/2 left-[97%] transform -translate-x-[97%] -translate-y-1/2 cursor-pointer"
 									onClick={() => toggleShowPassword()}
 								>
 									{validation.values.password ? (
