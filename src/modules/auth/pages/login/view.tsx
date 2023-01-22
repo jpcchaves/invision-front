@@ -16,6 +16,8 @@ const LoginView = ({
 	showPassword,
 	toggleShowPassword,
 }: LoginViewI) => {
+	document.title = 'Invision | Login';
+
 	return (
 		<div className="w-[100%] max-w-full md:w-[50%] md:h-screen pb-48">
 			<div className="font-black text-black text-3xl h-[80px] flex items-center justify-end pr-6">
@@ -63,9 +65,7 @@ const LoginView = ({
 								value={validation.values.email || ''}
 							/>
 							{validation.touched.email && validation.errors.email ? (
-								<span className="text-red-500 mb-1 text-sm">
-									<FormInvalidFeedback message={validation.errors.email} />
-								</span>
+								<FormInvalidFeedback message={validation.errors.email} />
 							) : null}
 							<span className="mt-1 text-sm focus:outline-none">Password</span>
 							<div className="w-full relative">
@@ -82,16 +82,16 @@ const LoginView = ({
 									value={validation.values.password || ''}
 								/>
 								<span
-									className="absolute right-3 top-3 cursor-pointer"
+									className="absolute top-1/2 left-[97%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
 									onClick={() => toggleShowPassword()}
 								>
-									{showPassword ? <BsEyeSlashFill /> : <BsEyeFill />}
+									{validation.values.password ? (
+										<>{showPassword ? <BsEyeSlashFill /> : <BsEyeFill />}</>
+									) : null}
 								</span>
 							</div>
 							{validation.touched.password && validation.errors.password ? (
-								<span className="text-red-500 mb-1 text-sm">
-									<FormInvalidFeedback message={validation.errors.password} />
-								</span>
+								<FormInvalidFeedback message={validation.errors.password} />
 							) : null}
 							<div className="text-end">
 								<span>Forgot password?</span>

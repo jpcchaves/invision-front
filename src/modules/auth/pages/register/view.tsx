@@ -16,6 +16,7 @@ const RegisterView = ({
 	showPassword,
 	toggleShowPassword,
 }: RegisterViewI) => {
+	document.title = 'Invision | Register';
 	return (
 		<div className="w-[100%] max-w-full md:w-[50%] md:h-screen pb-48">
 			<div className="font-black text-black text-3xl h-[80px] flex items-center justify-end pr-6">
@@ -65,12 +66,10 @@ const RegisterView = ({
 								value={validation.values.fullName || ''}
 							/>
 							{validation.touched.fullName && validation.errors.fullName ? (
-								<span className="text-red-500 mb-1 text-sm">
-									<FormInvalidFeedback message={validation.errors.fullName} />
-								</span>
+								<FormInvalidFeedback message={validation.errors.fullName} />
 							) : null}
 
-							<span className="text-sm">Users name or Email</span>
+							<span className="text-sm mt-1">Users name or Email</span>
 							<input
 								type="text"
 								name="email"
@@ -84,13 +83,9 @@ const RegisterView = ({
 								value={validation.values.email || ''}
 							/>
 							{validation.touched.email && validation.errors.email ? (
-								<span className="text-red-500 mb-1 text-sm">
-									<FormInvalidFeedback message={validation.errors.email} />
-								</span>
+								<FormInvalidFeedback message={validation.errors.email} />
 							) : null}
-							<span className="text-sm focus:outline-none">
-								Create Password
-							</span>
+							<span className="text-sm mt-1">Create Password</span>
 							<div className="w-full relative">
 								<input
 									name="password"
@@ -105,16 +100,16 @@ const RegisterView = ({
 									value={validation.values.password || ''}
 								/>
 								<span
-									className="absolute right-3 top-3 cursor-pointer"
+									className="absolute top-1/2 left-[97%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
 									onClick={() => toggleShowPassword()}
 								>
-									{showPassword ? <BsEyeSlashFill /> : <BsEyeFill />}
+									{validation.values.password ? (
+										<>{showPassword ? <BsEyeSlashFill /> : <BsEyeFill />}</>
+									) : null}
 								</span>
 							</div>
 							{validation.touched.password && validation.errors.password ? (
-								<span className="text-red-500 mb-1 text-sm">
-									<FormInvalidFeedback message={validation.errors.password} />
-								</span>
+								<FormInvalidFeedback message={validation.errors.password} />
 							) : null}
 
 							<div className="flex items-center justify-center mt-4">
